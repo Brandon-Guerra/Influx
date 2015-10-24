@@ -1,0 +1,22 @@
+{
+  "name": "influx",
+  "version": "1.0.0",
+  "description": "POS system to connect clients with merchants",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandon-Guerra/Influx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brandon-Guerra/Influx/issues"
+  },
+  "homepage": "https://github.com/Brandon-Guerra/Influx#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
