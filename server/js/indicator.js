@@ -1,7 +1,6 @@
 function indicate(n) {
-	//var n = JSON.parse(text);
-	//n.transactions goes below
-	if (n > 30) {
+	var n = JSON.parse(text);
+	if (n.transactions > 30) {
 		var img = new Image(300,300);
 		img.style.opacity = "0.87";
 		var div = document.getElementById('reccomend');
