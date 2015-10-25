@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Influx</title>
+<!-- Load CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- Load Icon Font -->
+<link href="css/webfont.css" rel="stylesheet" type="text/css" />
+<!-- Load jQuery library -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- Load jCarousel js -->
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+<!-- Load MixItUup js -->
+<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+<!-- Load js -->
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/indicator.js"></script>
+</head>
+<!-- Start Body -->
+<body>
+	<!-- Start Home -->
+	<a class="scroll" id="home"></a>
+	<div class="home hero">
+		<div class="overlay"></div>
+		<div class="herowrapper">
+			<h1>Hello, let's go shopping
+			<form method="get" action="/search" id="search" onsubmit="httpGet(http://localhost:8000/)">
+  				<input name="q" type="text" size="40" placeholder="Enter a business..." />
+			</form>
+			</h1>
+		</div>
+		<a href="javascript:void(0);" class="scrolldown">
+			<h3>submit then click me</h3>
+			<div data-icon="&#xe017;" class="icon"></div>
+		</a>
+	</div>
+	<!-- End Home -->
+
+	<!-- Start BlockQuote -->
+	<div class="blockquote main">
+		<blockquote>Finding you the <b>best</b> time to go shopping.</blockquote>
+	</div>
+	<!-- End BlockQuote -->
+
+	<!-- Start Section Divider -->
+	<div class="section divider">
+		<h2 id="servicestitle"> Influx Recommends... </h2>
+		<a class="scroll" id="services"></a>
+	</div>
+	<!-- End Section Divider -->
+
+	<!-- Start Content -->
+	<div class="content">
+
+		<!-- Start Main Paragraph -->
+		<p id="reccomend" class="main dark-gray">Recommendations go here.
+		<button onclick="indicate(40)">Click</button>
+		</p>
+		<!-- Start Main Paragraph -->
+
+	<footer class="footer">
+		<h6> © Brandon Guerra, Carly Kubacak, Yassi Sahba</h6></a>
+	</footer>
+
+</body>
+<!-- End Body -->
+</html>
