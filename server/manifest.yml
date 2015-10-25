@@ -1,0 +1,8 @@
+---
+applications:
+- name: brandon-app
+  command: node brandon-app.js
+  memory: 256M
+  instances: 1
+  host: brandon-app
+  path: .
