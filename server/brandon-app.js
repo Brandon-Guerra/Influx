@@ -1,11 +1,11 @@
-
+var moment = require('moment');
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
 var connection = mysql.createPool({
 	host	 : 'localhost',
 	user	 : 'root',
-	password : 'jaubert8',
+	password :  '',
 	database : 'influx'
 });
 
@@ -39,8 +39,23 @@ app.get("/transaction",function(req,res){
 		else {
 			connection.query('SELECT  COUNT(id) AS freq FROM transaction', function(err, rows, fields) {
 				n = (rows[0].freq);
-				number_of_transactions = '{"tranactions": n}';
+				number_of_transactions = '{"transactions": ' + n + '}';
 				res.sendStatus(number_of_transactions);
+				connection.release();
+			});
+		}
+	});
+});
+
+app.post('/transaction', function(req, res) {
+	connection.getConnection(function(err, connection) {
+		if (!err) {
+			const time = moment().format('YYYY-MM-DD HH:mm:ss');
+			const query = 'INSERT INTO transaction (merchant_id, time) VALUES(1, \'' + time +'\')';
+			console.log(query);
+			connection.query(query, function(err, rows, fields) {
+				console.log('New transaction for merchant 1 at ' + time);
+				res.sendStatus(200);
 				connection.release();
 			});
 		}
